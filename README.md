@@ -19,3 +19,7 @@
 - The output size if input = (100,100), kernel size = (2,2), stride of 1, and no pooling would be (99,99).
 - If you had 24 such filters stacked (conv2_24) the resulting number of weights would be 470448.
 - P = (S(O - 1) + F - I)/2
+## 5. Practical Patterns
+- The ImageDataGenerator is used to take images and preprocess them into batches of pre-processed data.
+- It is better to use multiple smaller stacked kernels than one larger one.
+- The weights for an (8,8) kernel is 64. The weights for 4 stacked smaller (2,2) kernels is 16.
